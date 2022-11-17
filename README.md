@@ -1,3 +1,24 @@
+Forked from phyOS-picom
+
+Install:
+  pacman -Syy meson libx11 libxext libxcb pixman libdbus libconfig libgl libegl libev uthash
+  git clone ... dir; cd dir
+  meson --buildtype=release . build
+  ninja -C build # build
+  ninja -C build install # install
+
+Pre Run:
+  picom --diagnostics # if no glx backend error then switch to xrender backend
+  source 1*
+
+Run:
+  picom --backend xrender &
+
+Uninstall:
+  ninja -C build uninstall # uninstall
+  rm -rf ~/.config/picom
+  
+
 picom
 =====
 
